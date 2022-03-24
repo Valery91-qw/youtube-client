@@ -1,5 +1,15 @@
 .header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
   width: 100%;
   height: auto;
-  border: 3px solid blue;
+
+  background-color: #E5E5E5;
+
+  .header__logo {
+    font-size: 0;
+    margin: 0 10px;
+  }
 }
