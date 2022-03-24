@@ -1,0 +1,16 @@
+.searching-container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+
+  .searching-field {
+    align-self: stretch;
+    padding: 0;
+
+    font-size: 12px;
+    line-height: 14px;
+
+    border: none;
+    background-color: #EFEFEF;
+  }
+}
