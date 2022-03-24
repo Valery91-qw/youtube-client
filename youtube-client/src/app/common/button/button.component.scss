@@ -1,5 +1,5 @@
 .button {
-  padding: 10px 25px;
+  padding: 5px 20px;
 
   font-size: 12px;
   font-family: Roboto, sans-serif;
@@ -12,4 +12,9 @@
   border-radius: 5px;
 
   box-shadow: 2px 0 4px #2F80ED;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
 }
