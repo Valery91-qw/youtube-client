@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['searching-field.component.scss'],
 })
 
-export class SearchingFieldComponent {}
+export class SearchingFieldComponent {
+  searchingValue: string | undefined = undefined
+
+  setSearchingString(value: string) {
+    this.searchingValue = value;
+  }
+}
