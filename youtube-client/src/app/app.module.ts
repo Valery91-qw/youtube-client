@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './common/button/button.component';
 import { SearchingFieldComponent } from './header/searching-field/searching-field.component';
+import { SortingComponent } from "./header/sorting/sorting.component";
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { SearchingFieldComponent } from './header/searching-field/searching-fiel
     HeaderComponent,
     ButtonComponent,
     SearchingFieldComponent,
+    SortingComponent,
   ],
   imports: [
     BrowserModule,

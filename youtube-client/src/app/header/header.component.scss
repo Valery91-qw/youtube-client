@@ -1,5 +1,6 @@
 .header-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 15px 0;
@@ -8,8 +9,15 @@
 
   background-color: #E5E5E5;
 
-  .header__logo {
-    font-size: 0;
-    margin: 0 10px;
+  .header-main {
+    display: flex;
+    height: auto;
+    align-items: center;
+    margin-bottom: 30px;
+
+    .header__logo {
+      font-size: 0;
+      margin: 0 10px;
+    }
   }
 }
