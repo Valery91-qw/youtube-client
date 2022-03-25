@@ -1,20 +1,24 @@
-.button {
-  padding: 5px 20px;
+:host {
+  margin-right: 10px;
 
-  font-size: 12px;
-  font-family: Roboto, sans-serif;
-  font-weight: 400;
-  line-height: 14px;
-  color: #FFFFFF;
+  .button {
+    padding: 5px 20px;
 
-  border: none;
-  background-color: #2F80ED;
-  border-radius: 5px;
+    font-size: 12px;
+    font-family: Roboto, sans-serif;
+    font-weight: 400;
+    line-height: 14px;
+    color: #FFFFFF;
 
-  box-shadow: 2px 0 4px #2F80ED;
-  cursor: pointer;
+    border: none;
+    background-color: #2F80ED;
+    border-radius: 5px;
 
-  &:hover {
-    opacity: .8;
+    box-shadow: 2px 0 4px #2F80ED;
+    cursor: pointer;
+
+    &:hover {
+      opacity: .8;
+    }
   }
 }
