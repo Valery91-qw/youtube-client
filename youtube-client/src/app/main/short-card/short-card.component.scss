@@ -1,0 +1,14 @@
+:host {
+  flex: 1 1 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .short-card-description {
+
+    .shor-cart-placeholder {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}

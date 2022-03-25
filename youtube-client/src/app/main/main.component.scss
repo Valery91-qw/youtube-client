@@ -1,4 +1,12 @@
 :host {
   width: 1200px;
   margin: 0 auto;
+
+  .main-container {
+    display: flex;
+    padding: 10px 0;
+    flex-wrap: wrap;
+
+    align-items: center;
+  }
 }
