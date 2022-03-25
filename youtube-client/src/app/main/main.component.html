@@ -1,5 +1,5 @@
-<div>item</div>
-<div>item</div>
-<div>item</div>
-<div>item</div>
-<div>item</div>
+<div>
+  <app-short-card
+    *ngFor="let shortCard of shortCards"
+    [shortCard]="shortCard"></app-short-card>
+</div>
