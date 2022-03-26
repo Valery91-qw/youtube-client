@@ -9,6 +9,7 @@ import { SearchingFieldComponent } from './header/searching-field/searching-fiel
 import { SortingComponent } from './header/sorting/sorting.component';
 import { MainComponent } from './main/main.component';
 import { ShortCardComponent } from './main/short-card/short-card.component';
+import { LoginFormComponent } from "./header/login-form/login-form.component";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ShortCardComponent } from './main/short-card/short-card.component';
     SortingComponent,
     MainComponent,
     ShortCardComponent,
+    LoginFormComponent,
   ],
   imports: [
     BrowserModule,

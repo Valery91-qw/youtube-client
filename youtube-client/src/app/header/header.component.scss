@@ -1,20 +1,11 @@
-.header-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 15px 0;
-  width: 100%;
-  height: auto;
-
-  background-color: #E5E5E5;
+:host {
+  width: 1200px;
+  margin: 0 auto;
 
   .header-main {
     display: flex;
-    width: 80%;
-    justify-content: space-evenly;
-
-    align-items: center;
-    margin-bottom: 30px;
+    justify-content: flex-end;
+    padding: 0 30px;
 
     .header__logo {
       font-size: 0;

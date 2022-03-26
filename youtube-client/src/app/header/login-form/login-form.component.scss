@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  align-items: center;
+
+  .user-name {
+    margin-right: 10px;
+
+    color: #4F4F4F;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
