@@ -1,0 +1,8 @@
+<input class="searching-field"
+       type="text"
+       placeholder="{{searchingValue ? searchingValue : 'searching'}}"
+       #searchField
+       (input)="setSearchingString(searchField.value)"
+/>
+<app-button class="button">search</app-button>
+<app-button><img class="img" [src]="searchingIcon" alt="options"/></app-button>
