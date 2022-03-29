@@ -6,10 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './common/button/button.component';
 import { SearchingFieldComponent } from './header/searching-field/searching-field.component';
-import { SortingComponent } from './header/sorting/sorting.component';
+import { SortingComponent } from './sorting/sorting.component';
 import { MainComponent } from './main/main.component';
 import { ShortCardComponent } from './main/short-card/short-card.component';
-import { LoginFormComponent } from "./header/login-form/login-form.component";
+import { LoginFormComponent } from './header/login-form/login-form.component';
+import { SubmitButtonComponent } from './header/searching-field/submit-button/submit-button.component';
+import { LogoComponent } from './header/logo/logo.component';
+import { SettingButtonComponent } from './header/setting-button/setting-button.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,9 @@ import { LoginFormComponent } from "./header/login-form/login-form.component";
     MainComponent,
     ShortCardComponent,
     LoginFormComponent,
+    SubmitButtonComponent,
+    LogoComponent,
+    SettingButtonComponent,
   ],
   imports: [
     BrowserModule,

@@ -7,8 +7,7 @@ import { Component } from '@angular/core';
 })
 
 export class SearchingFieldComponent {
-  searchingValue: string | undefined = undefined
-  searchingIcon: string = 'assets/Vector.png'
+  searchingValue: string | undefined = undefined;
 
   setSearchingString(value: string) {
     this.searchingValue = value;
