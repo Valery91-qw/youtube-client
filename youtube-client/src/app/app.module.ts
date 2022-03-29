@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { ButtonComponent } from './common/button/button.component';
 import { SearchingFieldComponent } from './header/searching-field/searching-field.component';
-import { SortingComponent } from './sorting/sorting.component';
+import { FilterBlockComponent } from './filter-block/filter-block.component';
 import { MainComponent } from './main/main.component';
 import { ShortCardComponent } from './main/short-card/short-card.component';
 import { LoginFormComponent } from './header/login-form/login-form.component';
@@ -20,7 +20,7 @@ import { SettingButtonComponent } from './header/setting-button/setting-button.c
     HeaderComponent,
     ButtonComponent,
     SearchingFieldComponent,
-    SortingComponent,
+    FilterBlockComponent,
     MainComponent,
     ShortCardComponent,
     LoginFormComponent,
