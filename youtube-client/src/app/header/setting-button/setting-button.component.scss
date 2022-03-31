@@ -1,0 +1,15 @@
+:host {
+  margin-left: 15px;
+  .button {
+    border: none;
+    background-color: #2F80ED;
+    padding: 5px 10px;
+    box-shadow: 2px 0 4px #2F80ED;
+    border-radius: 5px;
+
+    cursor: pointer;
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
