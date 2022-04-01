@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-block.component.scss'],
 })
 
-export class FilterBlockComponent { }
+export class FilterBlockComponent {
+  isShow: boolean;
+
+  constructor() {
+    this.isShow = false;
+  }
+}
