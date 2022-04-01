@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {IShorCards} from "./main/short-card/short-card.interface";
+import { IShorCards } from './main/short-card/short-card.interface';
 
 @Component({
   selector: 'app-root',
@@ -9,8 +9,11 @@ import {IShorCards} from "./main/short-card/short-card.interface";
 
 export class AppComponent {
   isShowFilter: boolean;
+
   searchingResults: IShorCards[] | undefined;
+
   changeVisibleCb: () => void;
+
   addResultsCb: () => void;
 
   constructor() {

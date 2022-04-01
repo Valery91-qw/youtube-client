@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-setting-button',
@@ -7,13 +7,14 @@ import {Component, Input} from '@angular/core';
 })
 export class SettingButtonComponent {
   optionsIcon: string;
-  @Input() changeVisibleCb?: () => void
+
+  @Input() changeVisibleCb?: () => void;
 
   constructor() {
     this.optionsIcon = 'assets/Vector.png';
   }
 
   onClick() {
-    if(this.changeVisibleCb) this.changeVisibleCb()
+    if (this.changeVisibleCb) this.changeVisibleCb();
   }
 }

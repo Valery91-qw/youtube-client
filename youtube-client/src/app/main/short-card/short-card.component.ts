@@ -8,6 +8,4 @@ import { IShorCards } from './short-card.interface';
 })
 export class ShortCardComponent {
   @Input() shortCard: IShorCards | undefined;
-
-  public onClick() {}
 }

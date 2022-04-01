@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { IShorCards } from './short-card/short-card.interface';
 
 @Component({
@@ -8,5 +8,5 @@ import { IShorCards } from './short-card/short-card.interface';
 })
 
 export class MainComponent {
-  @Input() searchingResults: IShorCards[] | undefined
+  @Input() searchingResults: IShorCards[] | undefined;
 }

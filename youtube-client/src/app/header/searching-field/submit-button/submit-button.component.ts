@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-submit-button',
@@ -7,6 +7,7 @@ import {Component, Input} from '@angular/core';
 })
 export class SubmitButtonComponent {
   @Input() addResultsCb?: () => void;
+
   title: string;
 
   constructor() {
@@ -14,6 +15,6 @@ export class SubmitButtonComponent {
   }
 
   onClick() {
-    if(this.addResultsCb) this.addResultsCb()
+    if (this.addResultsCb) this.addResultsCb();
   }
 }
