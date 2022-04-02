@@ -2,10 +2,43 @@
   flex: 1 0 15%;
   display: flex;
   flex-direction: column;
+  align-items: center;
 
-  padding: 20px 20px 0;
   margin: 15px;
   background-color: #E5E5E5;
+  border-radius: 5px;
+
+  .short-card-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    .shor-cart-placeholder {
+      margin: 20px 20px 0;
+      height: 150px;
+      width: auto;
+    }
+
+    .shor-cart-statistic {
+      display: flex;
+      width: 100%;
+      margin-top: 20px;
+      justify-content: space-around;
+
+      li:nth-child(1n) {
+        list-style-image: url('../../../assets/viewed.png');
+      }
+      li:nth-child(2) {
+        list-style-image: url("../../../assets/liked.png");
+      }
+      li:nth-child(3) {
+        list-style-image: url("../../../assets/dislike.png");
+      }
+      li:nth-child(4) {
+        list-style-image: url("../../../assets/Group 9.png");
+      }
+    }
+  }
 
   .button {
     padding: 5px 20px;
@@ -25,23 +58,6 @@
 
     &:hover {
       opacity: .8;
-    }
-  }
-
-  .short-card-description {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    .shor-cart-placeholder {
-      width: 150px;
-      height: 150px;
-    }
-
-    .shor-cart-statistic {
-      display: flex;
-      width: 100%;
-      justify-content: space-around;
     }
   }
 }
