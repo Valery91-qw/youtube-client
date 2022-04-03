@@ -77,8 +77,25 @@
     width: 100%;
     height: 5px;
 
-    background-color: #2F80ED;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
+  }
+}
+
+:host(.red) {
+  &:after {
+    background-color: #EB5757;
+  }
+}
+
+:host(.green) {
+  &:after {
+    background-color: #27AE60;
+  }
+}
+
+:host(.blue) {
+  &:after {
+    background-color: #2F80ED;
   }
 }

@@ -5,4 +5,5 @@ export interface IShorCards {
   likeCount: number;
   dislikeCount: number;
   commentCount: number;
+  publishedAt: string;
 }
