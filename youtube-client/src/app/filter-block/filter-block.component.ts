@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-filter-block',
@@ -6,10 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./filter-block.component.scss'],
 })
 
-export class FilterBlockComponent {
-  isShow: boolean;
+export class FilterBlockComponent implements OnInit {
+  isShow: boolean | undefined;
 
-  constructor() {
+  ngOnInit() {
     this.isShow = false;
   }
 }
