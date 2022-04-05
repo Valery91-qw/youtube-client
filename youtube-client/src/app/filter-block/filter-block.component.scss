@@ -1,0 +1,23 @@
+.sorting-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+  .sorting-button {
+    margin-right: 20px;
+
+    color: #2F80ED;
+    text-decoration: underline;
+
+    border: none;
+    background: none;
+
+    cursor: pointer;
+  }
+
+    .sorting-value {
+      border: none;
+      background-color: #EFEFEF;
+    }
+}
