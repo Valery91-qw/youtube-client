@@ -12,7 +12,6 @@ import { LoginFormComponent } from './header/login-form/login-form.component';
 import { SubmitButtonComponent } from './header/searching-field/submit-button/submit-button.component';
 import { LogoComponent } from './header/logo/logo.component';
 import { SettingButtonComponent } from './header/setting-button/setting-button.component';
-import { FilterBlockPipe } from './filter-block/filter-block.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +25,6 @@ import { FilterBlockPipe } from './filter-block/filter-block.pipe';
     SubmitButtonComponent,
     LogoComponent,
     SettingButtonComponent,
-    FilterBlockPipe,
   ],
   imports: [
     BrowserModule,
