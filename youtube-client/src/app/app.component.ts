@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IShorCards } from './main/short-card/short-card.interface';
+import { IShorCards } from './youtube/main/short-card/short-card.interface';
 
 @Component({
   selector: 'app-root',
