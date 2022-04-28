@@ -12,6 +12,7 @@ import { LoginFormComponent } from './core/header/login-form/login-form.componen
 import { SubmitButtonComponent } from './core/header/searching-field/submit-button/submit-button.component';
 import { LogoComponent } from './core/header/logo/logo.component';
 import { SettingButtonComponent } from './core/header/setting-button/setting-button.component';
+import {FilterPipe} from "./core/filter-block/pipes/filter.pipe";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SettingButtonComponent } from './core/header/setting-button/setting-but
     SubmitButtonComponent,
     LogoComponent,
     SettingButtonComponent,
+    FilterPipe,
   ],
   imports: [
     BrowserModule,
