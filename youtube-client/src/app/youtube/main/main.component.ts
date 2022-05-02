@@ -11,6 +11,6 @@ export class MainComponent {
   @Input() searchingResults: IShorCards[] | undefined;
   @Input() sortingOptions: {
     type: string | undefined,
-    options: boolean | undefined,
+    options: string | boolean | undefined,
   } | undefined;
 }

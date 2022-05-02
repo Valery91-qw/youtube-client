@@ -12,7 +12,7 @@ export class FilterBlockComponent implements OnInit {
   isShow: boolean | undefined;
   sorting: {
     type: string | undefined;
-    options: boolean | undefined;
+    options: string | boolean | undefined;
   } | undefined
 
   ngOnInit() {
@@ -27,6 +27,12 @@ export class FilterBlockComponent implements OnInit {
     const target = event.target as HTMLButtonElement;
     this.sorting!.type = target.value;
     this.sorting!.options = !this.sorting?.options
+    this.sendSortOptions.emit(this.sorting);
+  }
+  setSearchingText(event: Event) {
+    const target = event.target as HTMLInputElement;
+    this.sorting!.type = 'text';
+    this.sorting!.options = target.value;
     this.sendSortOptions.emit(this.sorting);
   }
 }

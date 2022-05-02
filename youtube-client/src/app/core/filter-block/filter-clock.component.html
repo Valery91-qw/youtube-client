@@ -4,6 +4,6 @@
   <button class="sorting-button" type="button" value="views" (click)="setSortType($event)">count of likes</button>
   <div>
     by word of sentence
-    <input class="sorting-value" type="text">
+    <input class="sorting-value" type="text" (input)="setSearchingText($event)">
   </div>
 </div>
