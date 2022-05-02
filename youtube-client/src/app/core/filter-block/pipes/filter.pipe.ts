@@ -8,12 +8,12 @@ import {IShorCards} from "../../../youtube/main/short-card/short-card.interface"
 export class FilterPipe implements PipeTransform {
   transform(
     value?: IShorCards[],
-    sortBy?: 'date' | 'views' | 'text',
+    sortBy?: string,
     isAsc?: boolean,
     searchValue?: string
   ): IShorCards[] | undefined {
     switch (sortBy) {
-      case "date":
+      case "data":
         return value?.sort((cur, next) => {
           const curDateMS = new Date(cur.publishedAt).getTime();
           const nextDateMS = new Date(next.publishedAt).getTime();

@@ -9,4 +9,5 @@ import { IShorCards } from './short-card/short-card.interface';
 
 export class MainComponent {
   @Input() searchingResults: IShorCards[] | undefined;
+  @Input() sortingOptions: string | undefined;
 }

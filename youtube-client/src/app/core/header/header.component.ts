@@ -8,6 +8,5 @@ import { Component, Input } from '@angular/core';
 
 export class HeaderComponent {
   @Input() changeVisibleCb?: () => void;
-
   @Input() addResultsCb?: () => void;
 }

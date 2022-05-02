@@ -1,6 +1,6 @@
 <div class="common-container">
   <app-header [changeVisibleCb]="changeVisibleCb"
               [addResultsCb]="addResultsCb"></app-header>
-  <app-filter-block *ngIf="isShowFilter"></app-filter-block>
-  <app-main [searchingResults]="searchingResults"></app-main>
+  <app-filter-block *ngIf="isShowFilter" (sendSortOptions)="setSortOptions($event)"></app-filter-block>
+  <app-main [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-main>
 </div>
