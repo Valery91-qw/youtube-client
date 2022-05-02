@@ -10,7 +10,10 @@ import { IShorCards } from './youtube/main/short-card/short-card.interface';
 export class AppComponent {
   isShowFilter: boolean;
   searchingResults: IShorCards[] | undefined;
-  sortingOptions: string | undefined;
+  sortingOptions: {
+    type: string | undefined,
+    options: boolean | undefined,
+  } | undefined;
 
   changeVisibleCb: () => void;
   addResultsCb: () => void;
@@ -21,7 +24,7 @@ export class AppComponent {
     this.addResultsCb = this.addResults.bind(this);
   }
 
-  setSortOptions(options: string) {
+  setSortOptions(options: {type: string | undefined, options: boolean | undefined}) {
     this.sortingOptions = options;
   }
 
