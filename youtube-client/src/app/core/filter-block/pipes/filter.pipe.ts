@@ -24,17 +24,9 @@ export class FilterPipe implements PipeTransform {
           return options ? cur.likeCount > next.likeCount ? -1 : 1 : cur.likeCount > next.likeCount ? 1 : -1;
         });
       case "text" :
-        return value?.sort((cur, next) => {
-          if(typeof options === 'string') {
-            if(next.title.includes(options)) {
-              return 1;
-            } else {
-              return -1
-            }
-        } else {
-            return 0
-          }
-        })
+        if(typeof options === 'string')
+        return value?.filter(card => card.title.toLowerCase().includes(options.toLowerCase()))
+        return;
       default:
         return value
     }
