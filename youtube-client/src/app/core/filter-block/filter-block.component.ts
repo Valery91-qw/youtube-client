@@ -1,4 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {
+  Component, EventEmitter, OnInit, Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-filter-block',
@@ -7,13 +9,14 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 })
 
 export class FilterBlockComponent implements OnInit {
-  @Output() sendSortOptions = new EventEmitter;
+  @Output() sendSortOptions = new EventEmitter();
 
   isShow: boolean | undefined;
+
   sorting: {
     type: string | undefined;
     options: string | boolean | undefined;
-  } | undefined
+  } | undefined;
 
   ngOnInit() {
     this.isShow = false;
@@ -26,9 +29,10 @@ export class FilterBlockComponent implements OnInit {
   setSortType(event: Event) {
     const target = event.target as HTMLButtonElement;
     this.sorting!.type = target.value;
-    this.sorting!.options = !this.sorting?.options
+    this.sorting!.options = !this.sorting?.options;
     this.sendSortOptions.emit(this.sorting);
   }
+
   setSearchingText(event: Event) {
     const target = event.target as HTMLInputElement;
     this.sorting!.type = 'text';
