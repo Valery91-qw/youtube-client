@@ -2,6 +2,7 @@ import {
   Component, HostBinding, Input, OnInit,
 } from '@angular/core';
 import { IShorCards } from './short-card.interface';
+import shortCardConstants from './short-card.constants';
 
 @Component({
   selector: 'app-short-card',
@@ -12,7 +13,7 @@ import { IShorCards } from './short-card.interface';
 export class ShortCardComponent implements OnInit {
   @Input() shortCard: IShorCards | undefined;
 
-  colorClass: string | undefined;
+  private colorClass: string | undefined;
 
   @HostBinding() class: string | undefined;
 
@@ -20,14 +21,17 @@ export class ShortCardComponent implements OnInit {
     const publishDay = Number(new Date(publishDate || new Date()));
     const dayNow = Number(new Date());
     const daysAgo = dayNow - publishDay;
-    const oneDayMS = 1000 * 60 * 60 * 24;
+    const oneDayMS = (
+      shortCardConstants.MS_IN_SECOND * shortCardConstants.SECONDS_IN_MIN
+      * shortCardConstants.MIN_IN_HOUR * shortCardConstants.HOURS_IN_DAY
+    );
     return Math.round(daysAgo / oneDayMS);
   }
 
   private static setColorClass(daysAgo: number): string {
-    if (daysAgo > 182) return 'red';
-    if (daysAgo < 30 && daysAgo ! > 7) return 'blue';
-    return 'green';
+    if (daysAgo > 182) return shortCardConstants.CLASS_RED;
+    if (daysAgo < 30 && daysAgo ! > 7) return shortCardConstants.CLASS_BLUE;
+    return shortCardConstants.CLASS_GREEN;
   }
 
   ngOnInit() {

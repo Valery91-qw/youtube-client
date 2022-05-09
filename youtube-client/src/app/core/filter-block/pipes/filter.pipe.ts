@@ -38,7 +38,7 @@ export class FilterPipe implements PipeTransform {
             (card) => card.title.toLowerCase().includes(options.toLowerCase()),
           );
         }
-        return;
+        return value;
       default:
         return value;
     }

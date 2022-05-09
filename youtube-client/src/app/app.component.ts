@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IShorCards } from './youtube/main/short-card/short-card.interface';
 
 @Component({
@@ -7,35 +7,36 @@ import { IShorCards } from './youtube/main/short-card/short-card.interface';
   styleUrls: ['./app.component.scss'],
 })
 
-export class AppComponent {
-  isShowFilter: boolean;
+export class AppComponent implements OnInit {
+  public isShowFilter: boolean = false;
 
-  searchingResults: IShorCards[] | undefined;
+  public searchingResults: IShorCards[] | undefined;
 
-  sortingOptions: {
+  public sortingOptions: {
     type: string | undefined,
     options: string | boolean | undefined,
   } | undefined;
 
-  changeVisibleCb: () => void;
+  public changeVisibleCb?: () => void;
 
-  addResultsCb: () => void;
+  public addResultsCb?: () => void;
 
-  constructor() {
-    this.isShowFilter = false;
+  ngOnInit() {
     this.changeVisibleCb = this.changeVisible.bind(this);
     this.addResultsCb = this.addResults.bind(this);
   }
 
-  setSortOptions(options: { type: string | undefined, options: string | boolean | undefined }) {
+  public setSortOptions(
+    options: { type: string | undefined, options: string | boolean | undefined },
+  ) {
     this.sortingOptions = options;
   }
 
-  changeVisible() {
+  private changeVisible() {
     this.isShowFilter = !this.isShowFilter;
   }
 
-  addResults() {
+  private addResults() {
     this.searchingResults = [
       {
         viewCount: 1020,
