@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { IShorCards } from '../../../youtube/main/short-card/short-card.interface';
+import { IShorCards } from '../../main/short-card/short-card.interface';
 
 @Pipe({
   name: 'FilterPipe',
