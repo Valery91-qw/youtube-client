@@ -6,14 +6,14 @@ import { IShorCards } from '../../main/short-card/short-card.interface';
 })
 
 export class FilterPipe implements PipeTransform {
-  transform(
-    value?: IShorCards[],
+  public transform(
+    shortCards?: IShorCards[],
     sortBy?: string,
     options?: string | boolean,
   ): Array<IShorCards> | undefined {
     switch (sortBy) {
       case 'data':
-        return value?.sort(
+        return shortCards?.sort(
           (cur, next) => {
             const curDateMS = new Date(cur.publishedAt).getTime();
             const nextDateMS = new Date(next.publishedAt).getTime();
@@ -24,7 +24,7 @@ export class FilterPipe implements PipeTransform {
           },
         );
       case 'views':
-        return value?.sort(
+        return shortCards?.sort(
           (cur, next) => {
             if (options) {
               return cur.likeCount > next.likeCount ? -1 : 1;
@@ -34,13 +34,13 @@ export class FilterPipe implements PipeTransform {
         );
       case 'text':
         if (typeof options === 'string') {
-          return value?.filter(
+          return shortCards?.filter(
             (card) => card.title.toLowerCase().includes(options.toLowerCase()),
           );
         }
-        return value;
+        return shortCards;
       default:
-        return value;
+        return shortCards;
     }
   }
 }

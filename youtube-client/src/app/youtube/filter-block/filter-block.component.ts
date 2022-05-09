@@ -1,6 +1,7 @@
 import {
   Component, EventEmitter, OnInit, Output,
 } from '@angular/core';
+import ISortingOptions from "./filter-block.interface";
 
 @Component({
   selector: 'app-filter-block',
@@ -13,10 +14,7 @@ export class FilterBlockComponent implements OnInit {
 
   isShow: boolean | undefined;
 
-  sorting: {
-    type: string | undefined;
-    options: string | boolean | undefined;
-  } | undefined;
+  sorting: ISortingOptions | undefined;
 
   ngOnInit() {
     this.isShow = false;

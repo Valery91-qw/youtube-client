@@ -6,7 +6,8 @@ import { FilterBlockComponent } from './youtube/filter-block/filter-block.compon
 import { MainComponent } from './youtube/main/main.component';
 import { ShortCardComponent } from './youtube/main/short-card/short-card.component';
 import { FilterPipe } from './youtube/filter-block/pipes/filter.pipe';
-import { CoreModule } from "./core/core.module";
+import { CoreModule } from './core/core.module';
+import {AppService} from "./app.service";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CoreModule } from "./core/core.module";
     BrowserModule,
     AppRoutingModule,
   ],
+  providers: [AppService],
   bootstrap: [AppComponent],
 })
 

@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { IShorCards } from './short-card/short-card.interface';
+import ISortingOptions from "../filter-block/filter-block.interface";
 
 @Component({
   selector: 'app-main',
@@ -10,8 +11,5 @@ import { IShorCards } from './short-card/short-card.interface';
 export class MainComponent {
   @Input() searchingResults: IShorCards[] | undefined;
 
-  @Input() sortingOptions: {
-    type: string | undefined,
-    options: string | boolean | undefined,
-  } | undefined;
+  @Input() sortingOptions: ISortingOptions | undefined;
 }
