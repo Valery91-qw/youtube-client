@@ -27,16 +27,16 @@
       justify-content: space-around;
 
       li:nth-child(1) {
-        list-style-image: url('../../../../assets/viewed.png');
+        list-style-image: url('../../../../../assets/viewed.png');
       }
       li:nth-child(2) {
-        list-style-image: url("../../../../assets/liked.png");
+        list-style-image: url("../../../../../assets/liked.png");
       }
       li:nth-child(3) {
-        list-style-image: url("../../../../assets/dislike.png");
+        list-style-image: url("../../../../../assets/dislike.png");
       }
       li:nth-child(4) {
-        list-style-image: url("../../../../assets/Group 9.png");
+        list-style-image: url("../../../../../assets/Group 9.png");
       }
     }
   }

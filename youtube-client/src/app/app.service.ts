@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {IShorCards} from "./youtube/main/short-card/short-card.interface";
+import {IShorCards} from "./youtube/components/main/short-card/short-card.interface";
 
 @Injectable()
 export class AppService {

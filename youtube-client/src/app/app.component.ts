@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IShorCards } from './youtube/main/short-card/short-card.interface';
+import { IShorCards } from './youtube/components/main/short-card/short-card.interface';
 import {AppService} from "./app.service";
-import ISortingOptions from "./youtube/filter-block/filter-block.interface";
+import ISortingOptions from "./youtube/components/filter-block/filter-block.interface";
 
 @Component({
   selector: 'app-root',

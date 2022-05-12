@@ -2,22 +2,16 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FilterBlockComponent } from './youtube/filter-block/filter-block.component';
-import { MainComponent } from './youtube/main/main.component';
-import { ShortCardComponent } from './youtube/main/short-card/short-card.component';
-import { FilterPipe } from './youtube/filter-block/pipes/filter.pipe';
 import { CoreModule } from './core/core.module';
-import {AppService} from "./app.service";
+import { AppService } from "./app.service";
+import { YoutubeModule } from "./youtube/youtube.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    FilterBlockComponent,
-    MainComponent,
-    ShortCardComponent,
-    FilterPipe,
   ],
   imports: [
+    YoutubeModule,
     CoreModule,
     BrowserModule,
     AppRoutingModule,
