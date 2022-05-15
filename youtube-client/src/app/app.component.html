@@ -3,5 +3,5 @@
               [addResultsCb]="addResultsCb"></app-header>
   <app-filter-block *ngIf="isShowFilter" (sendSortOptions)="setSortOptions($event)"></app-filter-block>
   <app-main [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-main>
-  <app-login-page></app-login-page>
+  <router-outlet></router-outlet>
 </div>
