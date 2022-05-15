@@ -48,28 +48,10 @@
     text-transform: uppercase;
     text-align: right;
   }
-
-  .button {
+  .button__card {
     margin-top: 30px;
-
     padding: 10px 30px;
-
     font-size: 14px;
-    font-family: Roboto, sans-serif;
-    font-weight: 400;
-    line-height: 14px;
-    color: #FFFFFF;
-
-    border: none;
-    background-color: #2F80ED;
-    border-radius: 5px;
-
-    box-shadow: 2px 0 4px #2F80ED;
-    cursor: pointer;
-
-    &:hover {
-      opacity: .8;
-    }
   }
   &:after {
     content: '';
