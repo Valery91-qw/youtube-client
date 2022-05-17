@@ -6,6 +6,7 @@ import { SearchingFieldComponent } from './components/header/searching-field/sea
 import { LogoComponent } from './components/header/logo/logo.component';
 import { LoginFormComponent } from './components/header/login-form/login-form.component';
 import { SubmitButtonComponent } from './components/header/searching-field/submit-button/submit-button.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { SubmitButtonComponent } from './components/header/searching-field/submi
     LoginFormComponent,
     SubmitButtonComponent,
   ],
-  imports: [CommonModule],
+  imports: [CommonModule, SharedModule],
   exports: [HeaderComponent],
 })
 

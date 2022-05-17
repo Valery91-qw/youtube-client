@@ -1,7 +1,7 @@
 import {
   Component, EventEmitter, OnInit, Output,
 } from '@angular/core';
-import ISortingOptions from "./filter-block.interface";
+import ISortingOptions from './filter-block.interface';
 
 @Component({
   selector: 'app-filter-block',

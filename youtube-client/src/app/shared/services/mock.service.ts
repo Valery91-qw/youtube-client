@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import {IShorCards} from "./youtube/components/main/short-card/short-card.interface";
+import { IShorCards } from '../../youtube/components/cards-box/short-card/short-card.interface';
 
-@Injectable()
-export class AppService {
-  public result:  IShorCards[] = [
+@Injectable({
+  providedIn: 'root',
+})
+
+export class MockService {
+  private result: IShorCards[] = [
     {
       viewCount: 1020,
       likeCount: 2,
@@ -40,5 +43,9 @@ export class AppService {
       imageUrl: 'https://i.ytimg.com/vi/G0bBLvWXBvc/hqdefault.jpg',
       publishedAt: '2019-09-04T15:00:12.000Z',
     },
-  ]
+  ];
+
+  public getResults(): IShorCards[] {
+    return this.result;
+  }
 }

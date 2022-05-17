@@ -2,6 +2,6 @@
   <app-header [changeVisibleCb]="changeVisibleCb"
               [addResultsCb]="addResultsCb"></app-header>
   <app-filter-block *ngIf="isShowFilter" (sendSortOptions)="setSortOptions($event)"></app-filter-block>
-  <app-main [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-main>
+  <app-cards-box [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-cards-box>
   <router-outlet></router-outlet>
 </div>

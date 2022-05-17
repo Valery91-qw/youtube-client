@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { IShorCards } from './youtube/components/main/short-card/short-card.interface';
-import {AppService} from "./app.service";
-import ISortingOptions from "./youtube/components/filter-block/filter-block.interface";
+import { IShorCards } from './youtube/components/cards-box/short-card/short-card.interface';
+import ISortingOptions from './youtube/components/filter-block/filter-block.interface';
+import { MockService } from './shared/services/mock.service';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
 
   public addResultsCb?: () => void;
 
-  constructor(private appService: AppService) {}
+  constructor(private mockServ: MockService) {}
 
   ngOnInit() {
     this.changeVisibleCb = this.changeVisible.bind(this);
@@ -39,6 +39,6 @@ export class AppComponent implements OnInit {
   }
 
   private addResults() {
-    this.searchingResults = this.appService.result;
+    this.searchingResults = this.mockServ.getResults();
   }
 }
