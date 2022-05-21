@@ -1,7 +1,2 @@
-<div class="common-container">
-  <app-header [changeVisibleCb]="changeVisibleCb"
-              [addResultsCb]="addResultsCb"></app-header>
-  <app-filter-block *ngIf="isShowFilter" (sendSortOptions)="setSortOptions($event)"></app-filter-block>
-  <app-cards-box [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-cards-box>
-  <router-outlet></router-outlet>
-</div>
+<app-header></app-header>
+<router-outlet></router-outlet>

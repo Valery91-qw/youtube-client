@@ -2,5 +2,11 @@
   margin-left: 15px;
   .button__settings {
     padding: 5px 10px;
+    &:disabled {
+      opacity: 0.7;
+      box-shadow: 2px 0 4px rgba(47, 128, 237, 70%);
+      cursor: not-allowed;
+    }
   }
 }
+

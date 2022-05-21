@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-searching-field',
@@ -7,9 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class SearchingFieldComponent {
-  @Input() addResultsCb?: () => void;
-
   searchingValue: string | undefined = undefined;
+  @Input() disable!: boolean
 
   setSearchingString(value: string) {
     this.searchingValue = value;

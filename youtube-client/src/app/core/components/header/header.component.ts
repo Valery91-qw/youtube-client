@@ -1,4 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import headerConstant from "./header.constant";
 
 @Component({
   selector: 'app-header',
@@ -6,8 +8,17 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 
-export class HeaderComponent {
-  @Input() changeVisibleCb?: () => void;
+export class HeaderComponent implements OnInit {
+  isSettingsVisible: boolean = false;
+  disable: boolean = false;
 
-  @Input() addResultsCb?: () => void;
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        event.url === headerConstant.defaultPath ? this.disable = false : this.disable = true;
+      }
+    });
+  }
 }

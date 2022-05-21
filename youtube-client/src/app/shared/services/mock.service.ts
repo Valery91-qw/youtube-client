@@ -6,6 +6,8 @@ import { IShorCards } from '../../youtube/components/cards-box/short-card/short-
 })
 
 export class MockService {
+  public showFilter = true;
+
   private result: IShorCards[] = [
     {
       viewCount: 1020,
@@ -45,7 +47,7 @@ export class MockService {
     },
   ];
 
-  public getResults(): IShorCards[] {
+  public getResults() {
     return this.result;
   }
 }

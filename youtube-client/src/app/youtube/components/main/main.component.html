@@ -1,0 +1,2 @@
+<app-filter-block *ngIf="isShowFilter" (sendSortOptions)="setSortOptions($event)"></app-filter-block>
+<app-cards-box [searchingResults]="searchingResults" [sortingOptions]="sortingOptions"></app-cards-box>

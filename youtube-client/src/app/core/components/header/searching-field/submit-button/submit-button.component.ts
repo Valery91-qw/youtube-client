@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-submit-button',
@@ -6,15 +6,10 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./submit-button.component.scss'],
 })
 export class SubmitButtonComponent {
-  @Input() addResultsCb?: () => void;
-
   title: string;
+  @Input() disable!: boolean;
 
   constructor() {
     this.title = 'search';
-  }
-
-  onClick() {
-    if (this.addResultsCb) this.addResultsCb();
   }
 }
