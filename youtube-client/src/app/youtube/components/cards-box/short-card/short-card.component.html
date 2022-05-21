@@ -1,0 +1,11 @@
+<div class="short-card-description">
+  <img class="shor-cart-placeholder" [src]="shortCard?.imageUrl" alt="placeholder">
+  <ul class="shor-cart-statistic">
+    <li>{{shortCard?.viewCount}}</li>
+    <li>{{shortCard?.likeCount}}</li>
+    <li>{{shortCard?.dislikeCount}}</li>
+    <li>{{shortCard?.commentCount}}</li>
+  </ul>
+  <h3 class="short-card-description__title">{{shortCard?.title}}</h3>
+</div>
+<button type="button" class="button button__card">more...</button>

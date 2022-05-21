@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.button {
+  padding: 5px 28px;
+
+  font-size: 12px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 14px;
+  color: #FFFFFF;
+
+  border: none;
+  background-color: #2F80ED;
+  border-radius: 5px;
+
+  box-shadow: 2px 0 4px #2F80ED;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .8;
+  }
+}

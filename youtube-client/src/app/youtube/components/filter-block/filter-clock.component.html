@@ -1,0 +1,9 @@
+<div class="sorting-container">
+  <span>Sorting by:</span>
+  <button class="sorting-button" type="button" value="data" (click)="setSortType($event)">data</button>
+  <button class="sorting-button" type="button" value="views" (click)="setSortType($event)">count of likes</button>
+  <div>
+    by word of sentence
+    <input class="sorting-value" type="text" (input)="setSearchingText($event)">
+  </div>
+</div>

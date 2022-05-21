@@ -1,0 +1,6 @@
+<div class="main-container">
+  <app-short-card
+    *ngFor="let shortCard of searchingResults | FilterPipe: sortingOptions?.type:sortingOptions?.options"
+    [shortCard]="shortCard"></app-short-card>
+</div>
+
