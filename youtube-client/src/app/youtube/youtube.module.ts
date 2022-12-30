@@ -5,6 +5,8 @@ import { CardsBoxComponent } from './components/cards-box/cards-box.component';
 import { ShortCardComponent } from './components/cards-box/short-card/short-card.component';
 import { SharedModule } from '../shared/shared.module';
 import { MainComponent } from './components/main/main.component';
+import { DetailedCardComponent } from './components/detailed-card/detailed-card.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -12,8 +14,9 @@ import { MainComponent } from './components/main/main.component';
     CardsBoxComponent,
     ShortCardComponent,
     MainComponent,
+    DetailedCardComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, AppRoutingModule],
   exports: [MainComponent],
 })
 

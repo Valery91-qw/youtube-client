@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 import { Pipe, PipeTransform } from '@angular/core';
 import { IShorCards } from '../../youtube/components/cards-box/short-card/short-card.interface';
 

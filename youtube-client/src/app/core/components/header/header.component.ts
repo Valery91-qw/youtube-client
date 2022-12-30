@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
-import headerConstant from "./header.constant";
+import headerConstant from './header.constant';
 
 @Component({
   selector: 'app-header',
@@ -10,6 +10,7 @@ import headerConstant from "./header.constant";
 
 export class HeaderComponent implements OnInit {
   isSettingsVisible: boolean = false;
+
   disable: boolean = false;
 
   constructor(private router: Router) { }

@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-not-found-page',
@@ -7,8 +7,9 @@ import {Component} from "@angular/core";
 })
 
 export class NotFoundPageComponent {
-  notFoundIcon: string
+  notFoundIcon: string;
+
   constructor() {
-    this.notFoundIcon = './assets/404.png'
+    this.notFoundIcon = './assets/404.png';
   }
 }

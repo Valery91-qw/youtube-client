@@ -50,4 +50,9 @@ export class MockService {
   public getResults() {
     return this.result;
   }
+
+  public isShowFilter() {
+    this.showFilter = !this.showFilter;
+    return this.showFilter;
+  }
 }

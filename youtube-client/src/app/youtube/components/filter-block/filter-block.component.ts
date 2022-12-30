@@ -12,12 +12,9 @@ import ISortingOptions from './filter-block.interface';
 export class FilterBlockComponent implements OnInit {
   @Output() sendSortOptions = new EventEmitter();
 
-  isShow: boolean | undefined;
-
   sorting: ISortingOptions | undefined;
 
   ngOnInit() {
-    this.isShow = false;
     this.sorting = {
       type: undefined,
       options: undefined,

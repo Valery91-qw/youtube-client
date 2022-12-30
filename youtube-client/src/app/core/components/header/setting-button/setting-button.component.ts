@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-setting-button',
@@ -7,7 +7,9 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class SettingButtonComponent implements OnInit {
   optionsIcon?: string;
+
   @Input() disable!: boolean;
+
   ngOnInit() {
     this.optionsIcon = 'assets/Vector.png';
   }

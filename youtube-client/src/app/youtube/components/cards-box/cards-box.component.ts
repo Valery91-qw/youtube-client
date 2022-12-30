@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IShorCards } from './short-card/short-card.interface';
 import ISortingOptions from '../filter-block/filter-block.interface';
+import { MockService } from '../../../shared/services/mock.service';
 
 @Component({
   selector: 'app-cards-box',
@@ -8,8 +9,24 @@ import ISortingOptions from '../filter-block/filter-block.interface';
   styleUrls: ['./cards-box.component.scss'],
 })
 
-export class CardsBoxComponent {
-  @Input() searchingResults: IShorCards[] | undefined;
+export class CardsBoxComponent implements OnInit {
+  public isShowFilter: boolean = false;
 
-  @Input() sortingOptions: ISortingOptions | undefined;
+  public searchingResults: IShorCards[] | undefined;
+
+  public sortingOptions: {
+    type: string | undefined,
+    options: string | boolean | undefined,
+  } | undefined;
+
+  constructor(private mockServ: MockService) {}
+
+  ngOnInit() {
+    this.isShowFilter = this.mockServ.showFilter;
+    this.searchingResults = this.mockServ.getResults();
+  }
+
+  public setSortOptions(options: ISortingOptions) {
+    this.sortingOptions = options;
+  }
 }

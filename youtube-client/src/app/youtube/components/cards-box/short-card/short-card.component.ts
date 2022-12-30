@@ -11,11 +11,11 @@ import shortCardConstants from './short-card.constants';
 })
 
 export class ShortCardComponent implements OnInit {
-  @Input() shortCard: IShorCards | undefined;
+  @Input() shortCard!: IShorCards;
 
-  private colorClass: string | undefined;
+  private colorClass!: string;
 
-  @HostBinding() class: string | undefined;
+  @HostBinding() class!: string;
 
   private static getNumbersOfDay(publishDate?: string): number {
     const publishDay = Number(new Date(publishDate || new Date()));

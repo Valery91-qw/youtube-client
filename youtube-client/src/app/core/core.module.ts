@@ -7,7 +7,8 @@ import { LogoComponent } from './components/header/logo/logo.component';
 import { LoginFormComponent } from './components/header/login-form/login-form.component';
 import { SubmitButtonComponent } from './components/header/searching-field/submit-button/submit-button.component';
 import { SharedModule } from '../shared/shared.module';
-import {NotFoundPageComponent} from "./components/not-found-page/not-found-page.component";
+import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
+import { AppRoutingModule } from '../app-routing.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {NotFoundPageComponent} from "./components/not-found-page/not-found-page.
     SubmitButtonComponent,
     NotFoundPageComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, AppRoutingModule],
   exports: [HeaderComponent, NotFoundPageComponent],
 })
 

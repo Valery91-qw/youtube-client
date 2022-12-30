@@ -1,0 +1,16 @@
+<button>prev</button>
+<img [src]="detailedCard.imageUrl" [alt]="detailedCard.title">
+<div>
+  <h3>{{ detailedCard.title }}</h3>
+  <p>
+    {{ detailedCard.description }}
+    {{ detailedCard.publishedAt }}
+  </p>
+  <div>
+    <span>{{ detailedCard.viewCount }}</span>
+    <span>{{ detailedCard.likeCount }}</span>
+    <span>{{ detailedCard.dislikeCount }}</span>
+    <span>{{ detailedCard.commentCount }}</span>
+  </div>
+</div>
+<button>next</button>
