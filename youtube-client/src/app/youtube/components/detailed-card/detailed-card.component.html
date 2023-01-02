@@ -1,16 +1,22 @@
-<button>prev</button>
-<img [src]="detailedCard.imageUrl" [alt]="detailedCard.title">
-<div>
-  <h3>{{ detailedCard.title }}</h3>
-  <p>
-    {{ detailedCard.description }}
-    {{ detailedCard.publishedAt }}
-  </p>
-  <div>
-    <span>{{ detailedCard.viewCount }}</span>
-    <span>{{ detailedCard.likeCount }}</span>
-    <span>{{ detailedCard.dislikeCount }}</span>
-    <span>{{ detailedCard.commentCount }}</span>
+<button class="button button-detailed"> <</button>
+<div class="container">
+  <img [src]="detailedCard!.imageUrl" [alt]="detailedCard!.title">
+  <div class="description">
+    <div>
+      <h3 class="description__title" style="display: inline-block">{{ detailedCard!.title }}</h3>
+      <span class="description__date">{{ detailedCard!.publishedAt | date : "fullDate"  }}</span>
+    </div>
+    <div>
+      <h6>Description:</h6>
+      <span class="description__content">
+      {{ detailedCard!.description }}
+      </span>
+    </div>
+    <div class="description__detail">
+      <span>{{ detailedCard!.viewCount }}</span>
+      <span>{{ detailedCard!.likeCount }}</span>
+      <span>{{ detailedCard!.dislikeCount }}</span>
+      <span>{{ detailedCard!.commentCount }}</span>
+    </div>
   </div>
 </div>
-<button>next</button>

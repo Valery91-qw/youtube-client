@@ -25,7 +25,7 @@ export class MockService {
       commentCount: 332,
       title: 'Score',
       imageUrl: 'https://i.ytimg.com/vi/G0bBLvWXBvc/hqdefault.jpg',
-      publishedAt: '2022-03-24T17:46:58.000Z',
+      publishedAt: '2022-12-29T17:46:58.000Z',
     },
     {
       viewCount: 14340,
@@ -34,7 +34,7 @@ export class MockService {
       commentCount: 34,
       title: 'Qui',
       imageUrl: 'https://i.ytimg.com/vi/Rf54BH35yrY/sddefault.jpg',
-      publishedAt: '2022-04-01T16:48:15.000Z',
+      publishedAt: '2022-12-01T16:48:15.000Z',
     },
     {
       viewCount: 210,
@@ -51,8 +51,7 @@ export class MockService {
     return this.result;
   }
 
-  public isShowFilter() {
-    this.showFilter = !this.showFilter;
-    return this.showFilter;
+  public getCardByTitle(title: string): IShorCards {
+    return this.result.find((el) => el.title === title) as IShorCards;
   }
 }

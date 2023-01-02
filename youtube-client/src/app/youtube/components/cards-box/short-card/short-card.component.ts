@@ -29,8 +29,8 @@ export class ShortCardComponent implements OnInit {
   }
 
   private static setColorClass(daysAgo: number): string {
-    if (daysAgo > 182) return shortCardConstants.CLASS_RED;
-    if (daysAgo < 30 && daysAgo ! > 7) return shortCardConstants.CLASS_BLUE;
+    if (daysAgo > shortCardConstants.HALF_YEAR) return shortCardConstants.CLASS_RED;
+    if (daysAgo > shortCardConstants.SEVEN_DAYS) return shortCardConstants.CLASS_BLUE;
     return shortCardConstants.CLASS_GREEN;
   }
 
