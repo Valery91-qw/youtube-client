@@ -1,5 +1,5 @@
-<button class="button button-detailed"> <</button>
-<div class="container">
+<a routerLink=".." class="button button-detailed"> <</a>
+<div class="container" [ngClass]="class">
   <img [src]="detailedCard!.imageUrl" [alt]="detailedCard!.title">
   <div class="description">
     <div>
@@ -12,11 +12,11 @@
       {{ detailedCard!.description }}
       </span>
     </div>
-    <div class="description__detail">
-      <span>{{ detailedCard!.viewCount }}</span>
-      <span>{{ detailedCard!.likeCount }}</span>
-      <span>{{ detailedCard!.dislikeCount }}</span>
-      <span>{{ detailedCard!.commentCount }}</span>
-    </div>
+    <ul class="description__detail">
+      <li>{{ detailedCard!.viewCount }}</li>
+      <li>{{ detailedCard!.likeCount }}</li>
+      <li>{{ detailedCard!.dislikeCount }}</li>
+      <li>{{ detailedCard!.commentCount }}</li>
+    </ul>
   </div>
 </div>

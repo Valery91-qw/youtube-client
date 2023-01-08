@@ -8,4 +8,4 @@
   </ul>
   <h3 class="short-card-description__title">{{shortCard?.title}}</h3>
 </div>
-<a class="button button__card" [routerLink]="'/video/' + shortCard.title">more...</a>
+<a class="button button__card" [routerLink]="'/video/' + shortCard.title" [queryParams]="{class}">more...</a>
