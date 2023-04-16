@@ -1,7 +1,7 @@
-import {Component, HostBinding, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {IDetailedCardInterface} from './detailed-card.interface';
-import {MockService} from '../../../shared/services/mock.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IDetailedCardInterface } from './detailed-card.interface';
+import { MockService } from '../../../shared/services/mock.service';
 
 @Component({
   selector: 'app-detailed-card',
@@ -11,7 +11,8 @@ import {MockService} from '../../../shared/services/mock.service';
 
 export class DetailedCardComponent implements OnInit {
   id!: string;
-  class!: string
+
+  class!: string;
 
   detailedCard?: IDetailedCardInterface;
 
@@ -25,7 +26,7 @@ export class DetailedCardComponent implements OnInit {
       this.id = params['id'];
     });
 
-    this.class = this.router.snapshot.queryParamMap.get('class')!
+    this.class = this.router.snapshot.queryParamMap.get('class')!;
 
     this.detailedCard = {
       ...this.mock.getCardByTitle(this.id),
